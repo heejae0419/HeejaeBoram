@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewprot" content="width=device-width"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<title>양희재-임보람</title>
+</head>
+
+<body>
+	<div id="firstMentionBox">
+		<div id="firstTitle">
+			희재 그리고 보람<br/>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		오래 기다리셨습니다<br/>
+		<br/>
+		드디어 저희가 <br/>
+		<br/>
+		결혼식을 올립니다<br/>
+	</div>
+
+	<div id="mainImageBox">
+		<img id="mainImage" src="main_image_round.png"/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+			5월 25일 오후 4시 30분<br/>
+			<br/>
+			어라운드 1774<br/>
+			<br/>
+			<br/>
+		<br/>
+	</div>
+
+	<div id="secondMentionBox">
+		<br/>
+		<br/>
+		[앤티크프레임] 충북 청주시 상당구 1순환로 1774 (명암동 106-3)
+		<button onclick="copy('충북 청주시 상당구 1순환로 1774')">주소 복사</button><br/>
+		<script>
+			function copy(val) {
+				var dummy = document.createElement("textarea");
+	  			document.body.appendChild(dummy);
+				dummy.value = val;
+				dummy.select();
+				document.execCommand("copy");
+				document.body.removeChild(dummy);
+
+				alert("주소가 클립보드에 복사되었습니다");
+				}
+		</script>
+		<ul>
+			<li>네비에 "엔티크프레임" 또는 상세주소를 검색해주세요</li>
+			<li>주차공간이 협소하니 청주랜드 주차장에 주차 후 걸어올라 와 주세요</li>
+			<li>어르신과 아이들은 예식 장소에 먼저 내려주신 후 청주랜드 주차장에 주차해주세요</li>
+			<li>비가 와도 눈이 와도 예식은 진행됩니다<br/>
+			미세먼지가 심하면 마스크를 준비해주시고, 비가 오면 우산을 준비해주세요</li>
+		</ul>
+	</div>
+
+	<!--
+	<div id="thirdMentionBox">
+		<h1>찾아오시는 길<br/></h1>
+	</div>
+	-->
+
+	<div id="mapContainer">
+		<div id="mapBox">
+			<div id="map"></div>
+		</div>
+
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c5a2356c546266760618c89b7119e534"></script>
+		<script>
+			var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+			var options = { //지도를 생성할 때 필요한 기본 옵션
+				center: new daum.maps.LatLng(36.6477563, 127.515007), //지도의 중심좌표.
+				level: 3 //지도의 레벨(확대, 축소 정도)
+				};
+
+			// 지도를 생성합니다    
+			var map = new daum.maps.Map(container, options);
+
+			// 마커 위치를 지정합니다
+			var markerPosition  = new daum.maps.LatLng(36.6477563, 127.515007); 
+
+			// 마커 위치를 지정합니다
+			var markerPosition2  = new daum.maps.LatLng(36.6496675, 127.514807); 
+
+			// 마커를 생성합니다
+			var marker = new daum.maps.Marker({
+	    		position: markerPosition
+			});
+
+			// 마커를 생성합니다
+			var marker2 = new daum.maps.Marker({
+	    		position: markerPosition2
+			});
+
+			// 마커가 지도 위에 표시되도록 설정합니다
+			marker.setMap(map);
+
+			// 마커가 지도 위에 표시되도록 설정합니다
+			marker2.setMap(map);
+
+			var iwContent = 
+				'<div id="mapLabel">[예식장]앤티크프레임'
+				+'<br/>'
+				+'<br/>'
+				+'<a href="http://map.daum.net/link/to/앤티크프레임,36.6477563, 127.515007" target="_blank">카카오지도</a>'
+				+'&nbsp&nbsp'
+				+'<a href="http://m.map.naver.com/route.nhn?menu=route&ename=앤티크프레임&ex=127.515007&ey=36.6477563&pathType=0&showMap=true" target="_blank">네이버지도</a>'
+				+'</div>';
+				//인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+	   			
+	   		var iwContent2 = 
+				'<div id="mapLabel">[주차장]청주랜드 주차장'
+				+'<br/>'
+				+'<br/>'
+				+'<a href="http://map.daum.net/link/to/청주랜드 주차장,36.6496675, 127.514807" target="_blank">카카오지도</a>'
+				+'&nbsp&nbsp'
+				+'<a href="http://m.map.naver.com/route.nhn?menu=route&ename=청주랜드 주차장&ex=127.514807&ey=36.6496675&pathType=0&showMap=true" target="_blank">네이버지도</a>'
+				+'</div>';
+				//인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+
+	   		var iwPosition = new daum.maps.LatLng(36.6477563, 127.515007); //인포윈도우 표시 위치입니다
+
+	   		var iwPosition2 = new daum.maps.LatLng(36.6496675, 127.514807); //인포윈도우 표시 위치입니다
+
+			// 인포윈도우를 생성합니다
+			var infowindow = new daum.maps.InfoWindow({
+	    		position : iwPosition, 
+	    		content : iwContent 
+			});
+	  
+	  		// 인포윈도우를 생성합니다
+			var infowindow2 = new daum.maps.InfoWindow({
+	    		position : iwPosition2, 
+	    		content : iwContent2 
+			});
+
+			// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+			infowindow.open(map, marker); 
+			infowindow2.open(map, marker2);
+		</script>
+	</div>
+
+</body>
+</html>

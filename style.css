@@ -1,0 +1,95 @@
+@font-face {
+	font-family: 'Batang_Regular';
+	src: url('Batang_Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'JejuMyeongjo';
+	src: url('JejuMyeongjo.ttf') format('truetype');
+}
+
+html {
+	font-family: 'JejuMyeongjo';
+	font-size: 3vh;
+}
+
+li {
+	margin : 1vh auto;
+}
+
+button {
+	border : 0.5vh solid rgb(253, 240, 218);
+	background-color: rgb(255, 255, 255);
+}
+
+a {
+	border : 0.5vh solid rgb(253, 240, 218);
+	color : rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-size: 2vh;
+	margin: 0.5vh auto;
+}
+
+#firstMentionBox {
+	width: 100vh;
+	text-align: center;
+	margin: 5vh auto;
+}
+
+#firstTitle {
+	font-size: 5vh;
+	color: rgb(206, 86, 127);
+	margin: 0 auto;
+}
+
+#mainImageBox {
+	width: 100vh;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#mainImage {
+	display:inline-block;
+	max-width: 80vh;
+	height: auto;
+	margin: 3vh auto;
+}
+
+#secondMentionBox {
+	width: 100vh;
+	text-align: left;
+	margin: 0 auto;
+}
+
+#secondTitle {
+	font-size: 3vh;
+	margin: 0 auto;
+	text-align: left;
+	color: rgb(253, 237, 217);
+}
+
+#mapContainer {
+	width: 100vh;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#mapBox {
+	width: 100vh;
+	display:inline-block;
+}
+
+#map {
+	width:100vh; 
+	height:50vh;
+	border : 0.5vh solid rgb(253, 240, 218);
+}
+
+#mapLabel {
+	width: 23vh;
+	height: auto;
+	padding: 0.5vh;
+	font-size: 2vh;
+	text-align: center;
+}
