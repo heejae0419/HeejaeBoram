@@ -27,7 +27,6 @@ a {
 	color : rgb(0, 0, 0);
 	background-color: rgb(255, 255, 255);
 	text-decoration: none;
-	font-size: 2vh;
 	margin: 0.5vh auto;
 }
 
@@ -90,14 +89,13 @@ a {
 
 #map {
 	width:100vh; 
-	height:50vh;
+	height:75vh;
 	border : 0.5vh solid rgb(253, 240, 218);
 }
 
 #mapLabel {
-	width: 23vh;
+	width: 33vh;
 	height: auto;
 	padding: 0.5vh;
-	font-size: 2vh;
 	text-align: center;
 }
